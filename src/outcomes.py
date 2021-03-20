@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 
 pd.options.mode.chained_assignment = None  # default='warn' - caution: this turns off setting with copy warning
-from viz import *
 
 
 def add_rule_based_label(df):

@@ -7,13 +7,8 @@ import numpy as np
 
 
 # data paths
-DIR_REPO = os.path.dirname(os.path.realpath(__file__)) # directory of the config file
-DIR_TRACKS = oj(DIR_REPO, '..', 'data', 'tracks')
-DIR_PROCESSED = oj(DIR_REPO, '..', 'data', 'processed')
-DIR_INTERIM = oj(DIR_REPO, '..', 'data', 'interim')
-DIR_FIGS = oj(DIR_REPO, '..', 'auxilin-paper', 'figs')
-DIR_RESULTS = '/scratch/users/vision/chandan/abc'
-FINAL_MODEL = oj(DIR_REPO, '..', 'models/dnn_full_long_normalized_across_track_1_feat_dynamin.pkl')
+DIR_PROCESSED = '/scratch/users/vision/data/abc_data/data_processed/processed'
+DIR_TRACKS = '/scratch/users/vision/data/abc_data/data_processed/tracks'
 
 # raw data ################################################################################
 data_dir_orig = '/scratch/users/vision/data/abc_data/auxilin_data_tracked'

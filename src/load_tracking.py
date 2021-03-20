@@ -14,7 +14,6 @@ except:
     from skimage.io import imread
 pd.options.mode.chained_assignment = None  # default='warn' - caution: this turns off setting with copy warning
 import pickle as pkl
-from viz import *
 import math
 import config
 from tqdm import tqdm
