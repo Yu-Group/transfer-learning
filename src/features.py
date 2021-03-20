@@ -358,7 +358,7 @@ def add_dasc_features(df, bins=100, by_cell=True):
     
     return df
 
-def downsample(x, length, padding='end'):
+def downsample(x, length=40, padding='end'):
     
     """
     downsample (clathrin) track
