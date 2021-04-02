@@ -7,8 +7,10 @@ import numpy as np
 
 
 # data paths
+DIR_CONFIG = os.path.dirname(os.path.abspath(__file__))
 DIR_PROCESSED = '/scratch/users/vision/data/abc_data/data_processed/processed'
 DIR_TRACKS = '/scratch/users/vision/data/abc_data/data_processed/tracks'
+DIR_MODELS = oj(DIR_CONFIG, '..', 'models')
 
 # raw data ################################################################################
 data_dir_orig = '/scratch/users/vision/data/abc_data/auxilin_data_tracked'

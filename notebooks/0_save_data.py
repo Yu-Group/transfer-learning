@@ -50,5 +50,21 @@ cols_to_drop = ['X_starts', 'X_extended', 'X_ends',
                 'Y_starts', 'Y_ends', 'sig_idxs', 'catIdx',
                 'Z_starts', 'Z_ends', 'valid', 'y_z_score']
 
-df_full = df_full.drop(columns=cols_to_drop)
-df_full.to_pickle(oj(config.DIR_PROCESSED, 'df_full.pkl'))
+            # downsample tracks
+            df['X_same_length'] = [features.downsample(df.iloc[i]['X'], length)
+                                   for i in range(len(df))] # downsampling
+            # normalize tracks
+            df = features.normalize_track(df, track='X_same_length', by_time_point=False)
+
+            # regression response
+            df = train_reg.add_sig_mean(df)     
+
+            # remove extraneous feats
+            # df = df[feat_names + meta]
+    #         df = df.dropna() 
+
+            # normalize features
+            if normalize:
+                for feat in feat_names:
+                    if 'X_same_length' not in feat:
+                        df = features.normalize_feature(df, feat)
